@@ -47,7 +47,7 @@ public class AziendaController {
 //		if (aziendaInstance.getId() != null)
 //			throw new IdNotNullForInsertException("impossibile creare un id per la creazione.");
 
-		return AziendaDTO.buildAziendaDTOFromModel(aziendaService.inserisciNuovo(aziendaInstance.buildAziendaModel()), false);
+		return AziendaDTO.buildAziendaDTOFromModel(aziendaService.inserisciNuovo(aziendaInstance.buildAziendaModel()), true);
 
 	}
 	

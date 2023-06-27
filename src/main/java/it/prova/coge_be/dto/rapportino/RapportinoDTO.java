@@ -46,10 +46,10 @@ public class RapportinoDTO {
 	public static RapportinoDTO buildRapportinoDTOFromModel(Rapportino rapportinoModel, boolean includeCommessa, boolean includeRisorsa) {
 		RapportinoDTO result = RapportinoDTO.builder().id(rapportinoModel.getId()).numeroGiorni(rapportinoModel.getNumeroGiorni()).build();
 		if(includeCommessa) {
-			result.setCommessa(CommessaDTO.buildCommessaDTOFromModel(rapportinoModel.getCommessa(), false, false));
+			result.setCommessa(CommessaDTO.buildCommessaDTOFromModel(rapportinoModel.getCommessa(), true, true));
 		}
 		if(includeRisorsa) {
-			result.setRisorsa(RisorsaDTO.buildRisorsaDTOFromModel(rapportinoModel.getRisorsa(), false, false));
+			result.setRisorsa(RisorsaDTO.buildRisorsaDTOFromModel(rapportinoModel.getRisorsa(), false, true	));
 		}
 		return result;
 	}

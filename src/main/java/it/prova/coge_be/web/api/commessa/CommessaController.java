@@ -40,13 +40,13 @@ public class CommessaController {
 
 	@GetMapping
 	public List<CommessaDTO> visualizzaCommesse() {
-		return CommessaDTO.createCommessaDTOListFromModelList(commessaService.listAll(), true, false);
+		return CommessaDTO.createCommessaDTOListFromModelList(commessaService.listAll(), false, false);
 
 	}
 
 	@GetMapping("/{id}")
 	public CommessaDTO visualizza(@PathVariable(required = true) Long id) {
-		return CommessaDTO.buildCommessaDTOFromModel(commessaService.caricaSingoloElemento(id), false, false);
+		return CommessaDTO.buildCommessaDTOFromModel(commessaService.caricaSingoloElemento(id), true, false);
 	}
 
 	@PostMapping

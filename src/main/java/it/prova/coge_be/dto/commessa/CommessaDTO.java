@@ -65,7 +65,7 @@ public class CommessaDTO {
 			result.setAzienda(AziendaDTO.buildAziendaDTOFromModel(commessaModel.getAzienda(), true));
 		}
 		if(includeRisorse) {
-			result.setRisorse(RisorsaDTO.createRisorsaDTOListFromModelSet(commessaModel.getRisorse(), false, false));
+			result.setRisorse(RisorsaDTO.createRisorsaDTOListFromModelSet(commessaModel.getRisorse(), true, false));
 		}
 		return result;
 	}

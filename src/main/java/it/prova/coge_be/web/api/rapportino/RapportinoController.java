@@ -43,7 +43,7 @@ public class RapportinoController {
 		
 		@GetMapping("/{id}")
 		public RapportinoDTO visualizza (@PathVariable(required = true) Long id,RapportinoPerInsertDTO rapportinoInput) {
-			return RapportinoDTO.buildRapportinoDTOFromModel(rapportinoService.caricaSingoloElemento(id), false, true);
+			return RapportinoDTO.buildRapportinoDTOFromModel(rapportinoService.caricaSingoloElemento(id), true, true);
 		
 		}
 		
