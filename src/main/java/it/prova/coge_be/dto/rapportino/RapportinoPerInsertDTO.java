@@ -23,6 +23,6 @@ private Long id;
 @Min(0)
 private Integer numeroGiorni;
 
-private Long risorsa_id;
+private Long risorsa;
 
 }

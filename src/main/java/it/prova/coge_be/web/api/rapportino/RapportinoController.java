@@ -1,4 +1,4 @@
-package it.prova.coge_be.web.api.rapportino;
+	package it.prova.coge_be.web.api.rapportino;
 
 import java.util.List;
 
@@ -54,7 +54,7 @@ public class RapportinoController {
 		if(rapportinoInput.getId() != null) {
 		throw new RuntimeException();
 		}
-		Risorsa risorsaCaricata = risorsaService.caricaSingoloElemento(rapportinoInput.getRisorsa_id());
+		Risorsa risorsaCaricata = risorsaService.caricaSingoloElemento(rapportinoInput.getRisorsa());
 		Rapportino rapportino = new Rapportino();
 		rapportino.setNumeroGiorni(rapportinoInput.getNumeroGiorni());
 		rapportino.setRisorsa(risorsaCaricata);
@@ -63,7 +63,6 @@ public class RapportinoController {
 
 		return RapportinoDTO.buildRapportinoDTOFromModel(rapportinoInserito, false, false);
 		}
-		
 		@PutMapping("{id}")
 		public RapportinoDTO update (@Valid @RequestBody RapportinoDTO rapportinoInput, @PathVariable(required = true) Long id) {
 			Rapportino rapportino = rapportinoService.caricaSingoloElemento(id);

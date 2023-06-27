@@ -23,6 +23,7 @@ public class RisorsaServiceImpl implements RisorsaService{
 	}
 
 	@Override
+	@Transactional
 	public Risorsa caricaSingoloElemento(Long id) {
 		return repository.findById(id).orElse(null);
 	}
